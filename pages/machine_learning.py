@@ -12,7 +12,7 @@ from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
 
 # Custom classes 
-from .utils import isNumerical
+from utils import isNumerical
 import os
 
 def app():
@@ -30,7 +30,7 @@ def app():
         params = {}
 
         # Use two column technique 
-        col1, col2 = st.beta_columns(2)
+        col1, col2 = st.columns(2)
 
         # Design column 1 
         y_var = col1.radio("Select the variable to be predicted (y)", options=data.columns)
@@ -160,3 +160,6 @@ def app():
             # Make a dataframe of results 
             results = pd.DataFrame(model_acc, columns=['Models', 'Accuracy']).sort_values(by='Accuracy', ascending=False)
             st.dataframe(results)
+
+if __name__ == '__main__':
+    app()
