@@ -25,7 +25,7 @@ def app():
         st.markdown("#### Change the information about column types")
         
         # Use two column technique 
-        col1, col2 = st.beta_columns(2)
+        col1, col2 = st.columns(2)
 
         global name, type
         # Design column 1 

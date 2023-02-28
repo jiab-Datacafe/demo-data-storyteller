@@ -5,7 +5,8 @@ from PIL import  Image
 
 # Custom imports 
 from multipage import MultiPage
-from pages import data_upload, machine_learning, metadata, data_visualize, redundant # import your pages here
+ # import your pages here
+from pages import data_upload, machine_learning, metadata, data_visualize, redundant, jiab_view
 
 # Create an instance of the app 
 app = MultiPage()
@@ -25,6 +26,7 @@ app.add_page("Change Metadata", metadata.app)
 app.add_page("Machine Learning", machine_learning.app)
 app.add_page("Data Analysis",data_visualize.app)
 app.add_page("Y-Parameter Optimization",redundant.app)
+app.add_page("jiab minimal",jiab_view.app)
 
 # The main app
 app.run()

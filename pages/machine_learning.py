@@ -12,7 +12,7 @@ from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
 
 # Custom classes 
-from utils import isNumerical
+from .utils import isNumerical
 import os
 
 def app():
